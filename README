@@ -1,0 +1,8 @@
+jqcached is a jQuery plugin that makes DOM selector caching extremely easy.
+
+Make your application perform better by querying the DOM once and using the selectors without any additional overhead of re-querying them ever again.
+
+Why use it?
+1. The DOM is slow, it is a bottleneck for each JavaScript application. Respect it - cache and reuse.
+2. In case you change the name of element's class or ID, you have to change it only at one place instead of all over the code.
+3. It creates convenient coding convention.
