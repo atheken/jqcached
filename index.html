@@ -1,0 +1,97 @@
+<!doctype html>
+<html itemscope itemtype="http://schema.org/Article">
+<head>
+	<title>jqcached is a jQuery plugin that makes DOM selector caching extremely easy</title>
+	<link rel="stylesheet" type="text/css" href="http://drnicwilliams.com/external/CodeHighlighter/styles.css"></link>
+    <script src="http://drnicwilliams.com/external/CodeHighlighter/clean_tumblr_pre.js"></script> 
+	<link rel="stylesheet" href="style.css" />
+
+	<meta property="og:title" content="jqcached" />
+	<meta property="og:description" content="jqcached is a jQuery plugin that makes DOM selector caching extremely easy." /> 
+
+	<meta itemprop="name" content="jqcached" />
+	<meta itemprop="description" content="jqcached is a jQuery plugin that makes DOM selector caching extremely easy." /> 
+</head>
+<body>
+	<div id="container">
+		<h1>jqcached</h1>
+
+		<h2>Sexy <strong>caching</strong> for your <strong>DOM</strong> selectors</h2>
+
+		<!-- AddThis Button BEGIN -->
+		<div class="addthis_toolbox addthis_default_style ">
+		<a class="addthis_button_facebook_like" fb:like:layout="button_count"></a>
+		<a class="addthis_button_tweet"></a>
+		<a class="addthis_button_google_plusone" g:plusone:size="medium"></a>
+		<a class="addthis_counter addthis_pill_style"></a>
+		</div>
+		<script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pubid=ra-4f468411377eda9a"></script>
+		<!-- AddThis Button END -->
+
+		<div class="highlighted">
+			<p>
+				<strong>jqcached</strong> is a jQuery plugin that makes DOM selector caching extremely easy.
+			</p>
+			<p class="mt20">
+				Make your application perform better by querying the DOM once and using the selectors without any additional overhead of re-querying them ever again.
+			</p>
+
+			<p class="mt20">
+				<h4>Why use it?</h4>
+				<ol>
+					<li>The DOM is slow, it is a bottleneck for each JavaScript application. Respect it - cache and reuse.</li>
+					<li>In case you change the name of element's class or ID, you have to change it only at one place instead of all over the code.</li>
+					<li>It creates convenient coding convention.</li>
+				</ol>
+			</p>
+
+			<p class="mt20">
+				<strong>Download it</strong> from this <a href="">public Git repository</a>. <strong>Read</strong> about it on <a href="">my blog</a>. And come say <i>'hi'</i> on <a href="">Twitter</a>.
+			</p>
+		</div>
+
+		<div>
+			<div style="float: left;">
+				<h3>How-to</h3>
+
+		<pre><code class="javascript">
+// Cache by assigning to the $.ss object
+$.jqcached({
+	'navMenu': $('#navMenu'),
+	'home': $('#navMenu').find('li:first')
+	'nextPage': $('a.nextPage')
+});
+<br/>
+// Use
+$.ss.navMenu.show();
+$.ss.home.bind('click', function () {
+	alert("We are in bee's knees");
+});
+$.ss.nextPage.addClass('highlight');
+		</code></pre>
+			</div>
+			<div style="float: right;">
+				<h3>How-to with context</h3>
+
+		<pre><code class="javascript">
+// Or cache by assigning to a passed object
+var myMenuView = {};
+$.jqcached({
+	'navMenu': $('#navMenu'),
+	'home': $('#navMenu').find('li:first')
+	'nextPage': $('a.nextPage')
+}, myMenuView);
+<br/>
+// Use
+myMenuView.ss.navMenu.show();
+myMenuView.ss.home.bind('click', function () {
+	alert("We are in bee's knees");
+});
+myMenuView.ss.nextPage.addClass('highlight');
+		</code></pre>
+			</div>
+		</div>
+<br/>
+	
+</body>
+</html>
