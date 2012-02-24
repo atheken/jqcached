@@ -1,16 +1,17 @@
 <!doctype html>
 <html itemscope itemtype="http://schema.org/Article">
 <head>
-	<title>jqcached is a jQuery plugin that makes DOM selector caching extremely easy</title>
+	<title>jqcached is a jQuery plugin that makes DOM selector caching extremely sexy</title>
+	<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
 	<link rel="stylesheet" type="text/css" href="http://drnicwilliams.com/external/CodeHighlighter/styles.css"></link>
     <script src="http://drnicwilliams.com/external/CodeHighlighter/clean_tumblr_pre.js"></script> 
 	<link rel="stylesheet" href="style.css" />
 
 	<meta property="og:title" content="jqcached" />
-	<meta property="og:description" content="jqcached is a jQuery plugin that makes DOM selector caching extremely easy." /> 
+	<meta property="og:description" content="jqcached is a jQuery plugin that makes DOM selector caching extremely sexy." /> 
 
 	<meta itemprop="name" content="jqcached" />
-	<meta itemprop="description" content="jqcached is a jQuery plugin that makes DOM selector caching extremely easy." /> 
+	<meta itemprop="description" content="jqcached is a jQuery plugin that makes DOM selector caching extremely sexy." /> 
 </head>
 <body>
 	<div id="container">
@@ -30,7 +31,7 @@
 
 		<div class="highlighted">
 			<p>
-				<strong>jqcached</strong> is a jQuery plugin that makes DOM selector caching extremely easy.
+				<strong>jqcached</strong> is a jQuery plugin that makes DOM selector caching extremely sexy.
 			</p>
 			<p class="mt20">
 				Make your application perform better by querying the DOM once and using the selectors without any additional overhead of re-querying them ever again.
@@ -46,23 +47,23 @@
 			</p>
 
 			<p class="mt20">
-				<strong>Download it</strong> from this <a href="">public Git repository</a>. <strong>Read</strong> about it on <a href="">my blog</a>. And come say <i>'hi'</i> on <a href="">Twitter</a>.
+				<strong>Download it</strong> from this <a href="http://github.com/filipminev/jqcached">public Git repository</a>. <strong>Read</strong> about it on <a href="http://1p1e1.tumblr.com/post/18181547103/jqcached-makes-dom-selectors-caching-extremely-sexy">my blog</a>. And come say <i>'hi'</i> on <a href="http://twitter.com/filipminev">Twitter</a>.
 			</p>
 		</div>
 
 		<div>
 			<div style="float: left;">
-				<h3>How-to</h3>
+				<h3>How-to without context</h3>
 
 		<pre><code class="javascript">
-// Cache by assigning to the $.ss object
+// Cache by assigning to the jQuery object
 $.jqcached({
 	'navMenu': $('#navMenu'),
 	'home': $('#navMenu').find('li:first')
 	'nextPage': $('a.nextPage')
 });
 <br/>
-// Use
+// Use by accessing selectors from $.ss
 $.ss.navMenu.show();
 $.ss.home.bind('click', function () {
 	alert("We are in bee's knees");
@@ -82,7 +83,7 @@ $.jqcached({
 	'nextPage': $('a.nextPage')
 }, myMenuView);
 <br/>
-// Use
+// Use by accessing selectors from myMenuView.ss
 myMenuView.ss.navMenu.show();
 myMenuView.ss.home.bind('click', function () {
 	alert("We are in bee's knees");
